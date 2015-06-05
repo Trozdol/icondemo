@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.trozdol.icondemo" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <preference name="AllowInlineMediaPlayback" value="false" />
+    <preference name="BackupWebStorage" value="cloud" />
+    <preference name="DisallowOverscroll" value="false" />
+    <preference name="EnableViewportScale" value="false" />
+    <preference name="KeyboardDisplayRequiresUserAction" value="true" />
+    <preference name="MediaPlaybackRequiresUserAction" value="false" />
+    <preference name="SuppressesIncrementalRendering" value="false" />
+    <preference name="GapBetweenPages" value="0" />
+    <preference name="PageLength" value="0" />
+    <preference name="PaginationBreakingMode" value="page" />
+    <preference name="PaginationMode" value="unpaginated" />
+    <feature name="LocalStorage">
+        <param name="ios-package" value="CDVLocalStorage" />
+    </feature>
+    <allow-intent href="itms:*" />
+    <allow-intent href="itms-apps:*" />
+    <icon height="57" src="www/resources/icons/Icon.png" width="57" />
+    <icon height="114" src="www/resources/icons/Icon@2x.png" width="114" />
+    <icon height="120" src="www/resources/icons/Icon-60@2x.png" width="120" />
+    <icon height="180" src="www/resources/icons/Icon-60@3x.png" width="180" />
+    <icon height="72" src="www/resources/icons/Icon-72.png" width="72" />
+    <icon height="144" src="www/resources/icons/Icon-72@2x.png" width="144" />
+    <icon height="76" src="www/resources/icons/Icon-76.png" width="76" />
+    <icon height="152" src="www/resources/icons/Icon-76@2x.png" width="152" />
+    <icon height="29" src="www/resources/icons/Icon-Small.png" width="29" />
+    <icon height="58" src="www/resources/icons/Icon-Small@2x.png" width="58" />
+    <icon height="87" src="www/resources/icons/Icon-Small@3x.png" width="87" />
+    <icon height="40" src="www/resources/icons/Icon-Small-40.png" width="40" />
+    <icon height="80" src="www/resources/icons/Icon-Small-40@2x.png" width="80" />
+    <icon height="120" src="www/resources/icons/Icon-Small-40@3x.png" width="120" />
+    <icon height="50" src="www/resources/icons/Icon-Small-50.png" width="50" />
+    <icon height="100" src="www/resources/icons/Icon-Small-50@2x.png" width="100" />
+    <splash height="460" src="www/resources/splash/Launch-Portrait-iPhone-3-@1x-320x460.png" width="320" />
+    <splash height="960" src="www/resources/splash/Launch-Portrait-iPhone-4-@2x-640x960.png" width="640" />
+    <splash height="1136" src="www/resources/splash/Launch-Portrait-iPhone-5-@2x-640x1136.png" width="640" />
+    <splash height="1334" src="www/resources/splash/Launch-Portrait-iPhone-6-@2x-750x1334.png" width="750" />
+    <splash height="2208" src="www/resources/splash/Launch-Portrait-iPhone-6-@3x-1242x2208.png" width="1242" />
+    <splash height="320" src="www/resources/splash/Launch-Landscape-iPhone-3-@1x-460x320.png" width="460" />
+    <splash height="640" src="www/resources/splash/Launch-Landscape-iPhone-4-@2x-960x640.png" width="960" />
+    <splash height="640" src="www/resources/splash/Launch-Landscape-iPhone-5-@2x-1136x640.png" width="1136" />
+    <splash height="750" src="www/resources/splash/Launch-Landscape-iPhone-6-@2x-1334x750.png" width="1334" />
+    <splash height="1242" src="www/resources/splash/Launch-Landscape-iPhone-6-@3x-2208x1242.png" width="2208" />
+    <splash height="1024" src="www/resources/splash/Launch-Portrait-iPad-@1x-768x1024.png" width="768" />
+    <splash height="2048" src="www/resources/splash/Launch-Portrait-iPad-@2x-1536x2048.png" width="1536" />
+    <splash height="768" src="www/resources/splash/Launch-Landscape-iPad-@1x-1024x768.png" width="1024" />
+    <splash height="1536" src="www/resources/splash/Launch-Landscape-iPad-@2x-2048x1536.png" width="2048" />
+    <name>IconDemo</name>
+    <description>
+        A demo application showing iOS app icons from Sencha copied to Cordova
+    </description>
+    <author email="shayne@trozdol.com" href="http://trozdol.com">
+        Shayne Trosdahl @Trozdol
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+</widget>
