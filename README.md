@@ -7,15 +7,15 @@ googling fingers and a ton of trial and error I bring you...
 
 **DISCLAIMER:**
 
-This might not be the 100% correct way. Maybe there's a better way. 
+This might not be the 100% correct way. Maybe there's a better way.
 (There probably is) But this way consistently works on builds for iOS.*
 
-Another thing: I didn't include Pre iOS 7 Load Screens 
+Another thing: I didn't include Pre iOS 7 Load Screens
 because dammit, that's a lot of images to try and keep track of for a stupid 20/40px to shave off on every single load screen for an old version of iOS. I made this to help others.
 
 For those who don't know I Apple has really relaxed on image naming. Thankfully. I half named the images the way they do but not exactly. I added the dimensions to the end of each file name and didn't use tilde? this thing `~`.
 
-ALSO: we could have gotten away with a lot less images or a few more. but you can specify Portrait/Landscape/UpsideDown/Left/Right etc. I don't have time to mess with that right now so go ahead and read up. 
+ALSO: we could have gotten away with a lot less images or a few more. but you can specify Portrait/Landscape/UpsideDown/Left/Right etc. I don't have time to mess with that right now so go ahead and read up.
 
 https://developer.apple.com/library/ios/qa/qa1686/_index.html
 
@@ -64,19 +64,19 @@ Open up your `app.js` file. There's two important sections here.
         '1536x2008': 'resources/startup/1536x2008.png',
         '1496x2048': 'resources/startup/1496x2048.png'
     },
-    
+
 ```
 That's how it looks if you didn't screw with it and you used
 Sencha Cmd to build your initial app.
 
 Chances are you did mess with it and it kind of works but
-not they way you expect. 
+not they way you expect.
 
 You did your next `sencha app build native` and you had to manually
 add in your icons in Xcode and dealing with all that stuff probably
 made you very angry and confused.
 
-Here's how my app.js looks after tearing it apart and finally 
+Here's how my app.js looks after tearing it apart and finally
 getting it to work then orgainizing it so I'm not consfused later.
 
 ```javascript
@@ -108,9 +108,9 @@ getting it to work then orgainizing it so I'm not consfused later.
         '50'  :   'resources/icons/Icon-Small-50.png',
         '100' :   'resources/icons/Icon-Small-50@2x.png'
     },
-    
+
    isIconPrecomposed: true,
-    
+
     startupImage: {
 
         // IPHONE -- PORTRAIT
@@ -137,11 +137,11 @@ getting it to work then orgainizing it so I'm not consfused later.
     },
 ```
 
-So you think you're good to go. All solved move on to real issues like programming right? 
+So you think you're good to go. All solved move on to real issues like programming right?
 Ha! No way man!
 
-You might have noticed in this app that there's my launch images are pointing to `resources/spash/...` 
-if you did good! Go to the store and buy yourself a cookie. Add that directory to your resources. 
+You might have noticed in this app that there's my launch images are pointing to `resources/spash/...`
+if you did good! Go to the store and buy yourself a cookie. Add that directory to your resources.
 
 DON'T FORGET to add to your app.json file!!!
 
@@ -159,8 +159,8 @@ So you're good now right? Nope. One more thing...
 
 In your cordova directory you should see a `config.xml` file. Open up that jerk.
 
-Here's really where the magic happens. This file will save your ass 
-from tedius repeditive work in the future. 
+Here's really where the magic happens. This file will save your ass
+from tedius repeditive work in the future.
 
 It looks something like this right now. You probably never even opened it.
 
@@ -194,9 +194,9 @@ It looks something like this right now. You probably never even opened it.
 ```
 ### No making sense, yo!
 
-This is how I found out how all this works. When running `sencha app build native` I saw in the Terminal it was saying `file not found in www/resources/splash/blah blah blah` So that's why I added the splash folder. 
+This is how I found out how all this works. When running `sencha app build native` I saw in the Terminal it was saying `file not found in www/resources/splash/blah blah blah` So that's why I added the splash folder.
 
-Somewhere a while back ago I found a line for `<icon...` and `<splash...` in a config.xml. Can't remember where. Anyway now my config.xml file looks like this. 
+Somewhere a while back ago I found a line for `<icon...` and `<splash...` in a config.xml. Can't remember where. Anyway now my config.xml file looks like this.
 
 ```xml
 
@@ -301,10 +301,10 @@ cd cordova
 
 cordova build ios
 
-# How about now? Still no? Ok then try... 
+# How about now? Still no? Ok then try...
 # (be careful if you had a bunch of custom work done in the platforms/ios folder. It will get whacked)
 
-cordova platform rm ios
+cordova platforms rm ios
 
 cordova platforms add ios
 
@@ -313,4 +313,3 @@ cordova build ios
 ```
 
 That's it! Easy right? From now on this should work no problem!
-
